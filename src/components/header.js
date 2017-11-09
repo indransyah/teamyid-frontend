@@ -15,8 +15,10 @@ class Header extends React.Component {
                   <li className="nav-item">
                     <a className="nav-link" href="/search">Find</a>
                   </li>
-                  <li className="nav-item active">
-                    <a className="nav-link" href="/group">Group<span className="sr-only">(current)</span></a>
+                  {/*<li className="nav-item active">*/}
+                  <li className="nav-item">
+                    {/*<a className="nav-link" href="/group">Group<span className="sr-only">(current)</span></a>*/}
+                    <a className="nav-link" href="/group">Group</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="/message">Message</a>

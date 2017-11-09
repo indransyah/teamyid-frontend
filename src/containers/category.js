@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Interest extends React.Component {
+class Category extends React.Component {
   render() {
     return (
       <div>
@@ -31,11 +31,9 @@ class Interest extends React.Component {
                   <label htmlFor="category">Category</label>
                   <select className="form-control" id="category">
                     <option>Choose one...</option>
-                    <option>Food</option>
-                    <option>Travel</option>
-                    <option>Healt</option>
-                    <option>Fintech</option>
-                    <option>IoT</option>
+                    <option>Hipster (Designer)</option>
+                    <option>Hacker (Developer)</option>
+                    <option>Hustle (Marketing)</option>
                   </select>
                 </div>
                 <div className="form-group">
@@ -52,4 +50,4 @@ class Interest extends React.Component {
   }
 }
 
-export default Interest
+export default Category

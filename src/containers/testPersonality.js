@@ -58,10 +58,10 @@ class TestPersonality extends React.Component {
           <div className="col-md-6">
             <div className="row justify-content-center">
               <div className="col-md-6">
-                <a href="/test-tutorial" role="button" className="btn btn-light btn-block">Back</a>
+                <a href="" role="button" className="btn btn-light btn-block">Back</a>
               </div>
               <div className="col-md-6">
-                <a href="/test-tutorial" role="button" className="btn btn-light btn-block">Next</a>
+                <a href="" role="button" className="btn btn-light btn-block">Next</a>
               </div>
             </div>
           </div>

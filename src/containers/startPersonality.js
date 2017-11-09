@@ -29,7 +29,7 @@ class StartPersonality extends React.Component {
           </div>
           <div className="row justify-content-center section">
             <div className="col-md-6">
-              <a href="/test-tutorial" role="button" className="btn btn-light btn-block">Next</a>
+              <a href="/start-personality" role="button" className="btn btn-light btn-block">Next</a>
             </div>
           </div>
         </div>
