@@ -1,10 +1,14 @@
 import React from 'react'
 
+import Profile from '../components/profile'
+
 class Search extends React.Component {
   render() {
     return (
       <div>
         <div className="jumbotron jumbotron-fluid" style={{ marginBottom: '0px'}}>
+          <Profile/>
+          {/*
           <div  className="container profile">
             <div className="row justify-content-center">
               <div className="col-5 col-sm-4 col-md-3 col-lg-2 ">
@@ -41,6 +45,7 @@ class Search extends React.Component {
               </div>
             </div>
           </div>
+          */}
         </div>
         <div className="container section">
           <div className="row section"> <h4>Hacker</h4> </div>

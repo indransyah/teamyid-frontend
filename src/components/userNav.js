@@ -5,7 +5,7 @@ class UserNav extends React.Component {
     e.preventDefault()
     localStorage.removeItem('token')
     localStorage.removeItem('name')
-    window.location.assign('/login')
+    window.location.assign('/')
   }
   render() {
     const name = localStorage.getItem('name')
