@@ -8,7 +8,6 @@ const initialState = {
 }
 
 function addAnswer(data, answer) {
-  console.log('addAnwer', data, answer)
   const index = data.findIndex((value) => {
     return value.question_id === answer.question_id
   })

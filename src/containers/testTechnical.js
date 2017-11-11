@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getQuestions, addAnswer, setCurrentQuestion } from '../actions/technicalTest'
+import { getQuestions, addAnswer, setCurrentQuestion, postAnswers } from '../actions/technicalTest'
 
 class TestTechnical extends React.Component {
   handleOnClick = (id) => (e) => {
@@ -18,7 +18,8 @@ class TestTechnical extends React.Component {
         dispatch(setCurrentQuestion(technicalTest.data[index]))
     } else if (index === technicalTest.data.length){
         console.log('submit', technicalTest.answers)
-        window.location.assign('/test-result')
+        dispatch(postAnswers(technicalTest.answers))
+        // window.location.assign('/test-result')
     }
   }
 
