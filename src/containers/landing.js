@@ -81,7 +81,7 @@ class Landing extends React.Component {
               </div>
               <div className="col-12 col-md-7 col-lg-8 ">
                 <div className="content-body">
-                  <p className="font-weight-light">  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                  <p className="font-weight-light"> Salah satu faktor kegagalan startup yang paling sering terjadi adalah karena tidak menemukan tim yang tepat. Kebanyakan startup tidak tahu rekan yang mana yang sebenarnya dibutuhkan untuk dijadikan tim. Tak jarang seluruh tim memiliki background dan personality yang sama sehingga membuat sebuah ide dengan visi yang sama. Padahal personality yang sama itu tidak selamanya membuat tim kombak. Terkadang karena personality yang sama bisa membuat masing-masing anggota tidak mau mengalah atau malah bisa jadi bisa membuat semua menjadi passive. Lalu bagaimana kah cara menemukan anggota tim yang seharusnya?</p>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ class Landing extends React.Component {
               </div>
               <div className="col-12 col-md-6 order-md-1 col-lg-7 ">
                 <div className="content-body">
-                  <p className="font-weight-light"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                  <p className="font-weight-light">  Selain skill/kemampuan yang harus beragam dan saling melengkapi, keberagaman personality yang cocok juga sangat menunjang teamwork dalam team. Prinsip dasar dari teamwork adalah untuk membangun lingkungan kerja kondusif dan juga efektif untuk menyelesaikan suatu pekerjaan secara bersama. Manfaat dari sinergi tim sedemikian rupa sehingga anggota dari kerja tim yang kooperatif antara satu dengan sama lain bisa mencapai hasil yang lebih lebih daripada bekerja secara independen. Dengan demikian, tim bisa menjadi unit dasar untuk pemberdayaan secara bersama untuk kekuatan kolektif dan membuat partisipasi yang efektif dan ikatan dengan ikatan. </p>
                 </div>
               </div>
             </div>
@@ -115,19 +115,7 @@ class Landing extends React.Component {
               </div>
               <div className="col-12 col-md-6  col-lg-7 ">
                 <div className="content-body">
-                  <p className="font-weight-light"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                </div>
-              </div>
-            </div>
-            <div className="row align-items-center section">
-              <div className="col-12 col-md-6 order-md-2 col-lg-5 ">
-                <div className="content-body">
-                  <img src="img/team.png" className="img-fluid" style={{ paddingLeft: '50px', paddingRight: '50px' }} alt=""/>
-                </div>
-              </div>
-              <div className="col-12 col-md-6 order-md-1 col-lg-7 ">
-                <div className="content-body">
-                  <p className="font-weight-light"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                  <p className="font-weight-light"> Di sinilah peran hipster, hustler, dan hacker dibutuhkan dalam mengisi dan mendukung performa sebuah tim.  Untuk mencari tau dan mempelajari lebih lanjut mengenai hacker, hipster, dan hustler kita perlu melakukan assessment. Dengan Teamy.ID kita tidak hanya bisa mengetahui hacker, hipster, dan hustler namun kita juga bisa mengetahui personality type yang cocok antara hacker, hipster dan hustler.</p>
                 </div>
               </div>
             </div>
@@ -150,7 +138,7 @@ class Landing extends React.Component {
                     </div>
                   </div>
                   <h3>Know</h3>
-                  <p className="font-weight-light"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                  <p className="font-weight-light"> Mengetahui apa jenis personality kita dengan metode sixteen personality dan apakah kita termasuk hustler, hipster atau hacker?</p>
                 </div>
               </div>
               <div className="col-12 col-md-4 ">
@@ -161,7 +149,7 @@ class Landing extends React.Component {
                     </div>
                   </div>
                   <h3>Find</h3>
-                  <p className="font-weight-light"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <p className="font-weight-light"> Menemukan rekan tim dengan melengkapi hustler, hipster dan hacker serta mencocokan berdasarkan relasi antar personality dan skill yg relevan. </p>
                 </div>
               </div>
               <div className="col-12 col-md-4 ">
@@ -172,7 +160,7 @@ class Landing extends React.Component {
                     </div>
                   </div>
                   <h3>Team</h3>
-                  <p className="font-weight-light"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                  <p className="font-weight-light"> Disini lah awal kolaborasi yang baik untuk membangun lingkungan kerja kondusif dan juga efektif untuk menyelesaikan suatu pekerjaan secara bersama </p>
                 </div>
               </div>
             </div>
@@ -226,7 +214,7 @@ class Landing extends React.Component {
                 <div className="content-body text-center">
                   <div className="row justify-content-center">
                     <div className="col-6 col-md-8">
-                      <img src="img/skill.png" className="img-fluid img-fitur rounded-circle" alt=""/>
+                      <img src="img/dyas.png" className="img-fluid img-fitur rounded-circle" alt=""/>
                     </div>
                   </div>
                   <h3>Dyas Yaskur</h3>
