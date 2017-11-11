@@ -21,12 +21,14 @@ class Login extends React.Component {
                 <div id="logo" className=""></div>
                 <form>
                   <div className="form-group text-center">
+                    {!localStorage.getItem('token') &&
                     <FacebookLogin
                       appId="1956958527653874"
                       autoLoad={false}
                       fields="name,email,picture"
                       callback={this.handleResponse}
                     />
+                    }
                   </div>
                   {/*
                   <div className="form-group">

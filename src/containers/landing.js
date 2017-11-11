@@ -3,6 +3,7 @@ import FacebookLogin from 'react-facebook-login'
 import { connect } from 'react-redux'
 
 import { login } from '../actions/user'
+import UserNav from '../components/userNav'
 
 import '../Landing.css';
 
@@ -39,6 +40,7 @@ class Landing extends React.Component {
                   <a className="nav-link " href="#team">TEAM</a>
                 </li>
               </ul>
+              <UserNav isLanding={true}/>
             </div>
           </div>
         </nav>
@@ -51,12 +53,14 @@ class Landing extends React.Component {
                 {/*<img src="img/logo.png" className="img-fluid brand-lg" alt=""/>*/}
               </div>
               <div className="form-group text-center">
+                {!localStorage.getItem('token') &&
                 <FacebookLogin
                   appId="1956958527653874"
                   autoLoad={false}
                   fields="name,email,picture"
                   callback={this.handleResponse}
                 />
+                }
               </div>
               {/*<button type="submit" className="btn btn-light btn-block">SIGNUP</button>*/}
               <br/>

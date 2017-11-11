@@ -1,14 +1,8 @@
 import React from 'react'
+import UserNav from './userNav'
 
 class Header extends React.Component {
-  handleClick = (e) => {
-    e.preventDefault()
-    localStorage.removeItem('token')
-    localStorage.removeItem('name')
-    window.location.assign('/login')
-  }
   render() {
-    const name = localStorage.getItem('name')
     return (
       <div className="container">
         <nav className="navbar navbar-expand-md fixed-top navbar-dark bg-blue-dark">
@@ -22,34 +16,20 @@ class Header extends React.Component {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="/search">Find</a>
+                    <a className="nav-link" href="/welcome">Dashboard</a>
                   </li>
                   {/*<li className="nav-item active">*/}
                   <li className="nav-item">
                     {/*<a className="nav-link" href="/group">Group<span className="sr-only">(current)</span></a>*/}
-                    <a className="nav-link" href="/group">Group</a>
+                    <a className="nav-link" href="/search">Find</a>
                   </li>
+                  {/*}
                   <li className="nav-item">
                     <a className="nav-link" href="/message">Message</a>
                   </li>
+                  */}
                 </ul>
-                { name &&
-                <ul className="navbar-nav">
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     {name}
-                    </a>
-                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                      {/*
-                      <a className="dropdown-item" href="">Profile</a>
-                      <a className="dropdown-item" href="">Setting</a>
-                      <div className="dropdown-divider"></div>
-                      */}
-                      <a className="dropdown-item" href="/" onClick={this.handleClick}>Logout</a>
-                    </div>
-                  </li>
-                </ul>
-                }
+                <UserNav/>
               </div>
           </div>
         </nav>
