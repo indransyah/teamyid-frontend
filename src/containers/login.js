@@ -1,6 +1,14 @@
 import React from 'react'
+import FacebookLogin from 'react-facebook-login'
+
+import { login } from '../actions/user'
 
 class Login extends React.Component {
+  handleResponse = (res) => {
+    const { dispatch } = this.props
+    dispatch(login(res.accessToken))
+  }
+
   render() {
     return (
       <div>
@@ -10,10 +18,16 @@ class Login extends React.Component {
             <div className="row">
               <div className="col-md-6 col-8 offset-md-3 offset-2">
                 <div id="logo" className=""></div>
-                <form action="/welcome">
-                  <div className="form-group">
-                    <button type="submit" className="btn btn-primary btn-block">Login with Facebook</button>
+                <form>
+                  <div className="form-group text-center">
+                    <FacebookLogin
+                      appId="1956958527653874"
+                      autoLoad={false}
+                      fields="name,email,picture"
+                      callback={this.handleResponse}
+                    />
                   </div>
+                  {/*
                   <div className="form-group">
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
                   </div>
@@ -21,11 +35,14 @@ class Login extends React.Component {
                     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
                   </div>
                   <button type="submit"  className="btn btn-light btn-block">SIGNUP</button>
+                  */}
                 </form>
+                {/*
                 <br/>
                 <div className="form-group text-center">
                   <p>Already have account? Please Signin!</p>
                 </div>
+                */}
               </div>
             </div>
           </div>

@@ -33,6 +33,7 @@ class Header extends React.Component {
                     <a className="nav-link" href="/message">Message</a>
                   </li>
                 </ul>
+                { name &&
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,6 +49,7 @@ class Header extends React.Component {
                     </div>
                   </li>
                 </ul>
+                }
               </div>
           </div>
         </nav>
