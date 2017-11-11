@@ -51,7 +51,12 @@ const formatQuestions = questions => {
 // Async
 export const getQuestions = () => {
   return (dispatch) => {
-    axios(`${config.apiUrl}api/personality-test/random`)
+    axios(`${config.apiUrl}api/personality-test/random`, {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
     .then(res => {
       const questions = formatQuestions(res.data.data)
       dispatch(setQuestions(questions))
