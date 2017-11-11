@@ -7,6 +7,12 @@ Install dependencies:
 npm install
 ```
 
+Run the data server:
+
+```sh
+npm run server
+```
+
 Run the React app:
 
 ```sh
