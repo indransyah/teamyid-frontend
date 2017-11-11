@@ -1,7 +1,14 @@
 import React from 'react'
 
 class Header extends React.Component {
+  handleClick = (e) => {
+    e.preventDefault()
+    localStorage.removeItem('token')
+    localStorage.removeItem('name')
+    window.location.assign('/login')
+  }
   render() {
+    const name = localStorage.getItem('name')
     return (
       <div className="container">
         <nav className="navbar navbar-expand-md fixed-top navbar-dark bg-blue-dark">
@@ -29,13 +36,15 @@ class Header extends React.Component {
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Hengky
+                     {name}
                     </a>
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                      {/*
                       <a className="dropdown-item" href="">Profile</a>
                       <a className="dropdown-item" href="">Setting</a>
                       <div className="dropdown-divider"></div>
-                      <a className="dropdown-item" href="/">Logout</a>
+                      */}
+                      <a className="dropdown-item" href="/" onClick={this.handleClick}>Logout</a>
                     </div>
                   </li>
                 </ul>

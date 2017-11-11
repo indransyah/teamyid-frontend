@@ -1,8 +1,17 @@
 import React from 'react'
+import FacebookLogin from 'react-facebook-login'
+import { connect } from 'react-redux'
+
+import { login } from '../actions/user'
 
 import '../Landing.css';
 
 class Landing extends React.Component {
+  handleResponse = (res) => {
+    const { dispatch } = this.props
+    dispatch(login(res.accessToken))
+  }
+
   render() {
     return (
       <div>
@@ -39,12 +48,17 @@ class Landing extends React.Component {
           <div className="row justify-content-center">
             <div className="col-md-4 col-sm-8 ">
               <div id="logo" className="logo-brand text-center">
-                <img src="img/logo.png" className="img-fluid brand-lg" alt=""/>
+                {/*<img src="img/logo.png" className="img-fluid brand-lg" alt=""/>*/}
               </div>
-              <div className="form-group">  
-                <button type="submit" className="btn btn-light btn-block">Login with Facebook</button>
+              <div className="form-group text-center">
+                <FacebookLogin
+                  appId="1956958527653874"
+                  autoLoad={false}
+                  fields="name,email,picture"
+                  callback={this.handleResponse}
+                />
               </div>
-              <button type="submit" className="btn btn-light btn-block">SIGNUP</button>
+              {/*<button type="submit" className="btn btn-light btn-block">SIGNUP</button>*/}
               <br/>
             </div>
           </div>
@@ -252,4 +266,6 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing
+export default connect(state => ({
+  user: state.user
+}))(Landing)
