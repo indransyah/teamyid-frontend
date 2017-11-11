@@ -7,6 +7,24 @@ const initialState = {
   answers: []
 }
 
+const addAnswer = (data, answer) => {
+  const index = data.findIndex(value => {
+    return value.question_id === answer.question_id
+  })
+  if (index < 0) {
+    return [
+      ...data,
+      answer
+    ]
+  } else {
+    return [
+      ...data.slice(0, index),
+      answer,
+      ...data.slice(index + 1)
+    ]
+  }
+}
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.PERSONALITY_TEST_LOADING_CHANGE:
@@ -27,10 +45,7 @@ export default (state = initialState, action) => {
     case types.PERSONALITY_TEST_ANSWER_SET:
       return {
         ...state,
-        answers: [
-          ...state.answers,
-          action.payload
-        ]
+        answers: addAnswer([ ...state.answers ], action.payload)
       }
     default:
       return state

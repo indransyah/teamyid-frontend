@@ -29,3 +29,19 @@ export const login = (facebookToken) => {
     .catch(console.error)
   }
 }
+
+export const getProfile = () => {
+  return (dispatch) => {
+    axios(`${config.apiUrl}api/profile`, {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    .then(res => {
+      console.log('res getProfile', res.data)
+      dispatch(setUserData(res.data.data))
+    })
+    .catch(console.error)
+  }
+}

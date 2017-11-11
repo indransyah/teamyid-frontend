@@ -51,6 +51,7 @@ const formatQuestions = questions => {
 // Async
 export const getQuestions = () => {
   return (dispatch) => {
+    dispatch(changeLoading(true))
     axios(`${config.apiUrl}api/personality-test/random`, {
       headers: {
         'Accept': 'application/json',
@@ -62,6 +63,30 @@ export const getQuestions = () => {
       dispatch(setQuestions(questions))
       dispatch(setCurrentQuestion(questions[0]))
       dispatch(changeLoading(false))
+    })
+    .catch(err => {
+      dispatch(changeLoading(false))
+      console.error(err)
+    })
+  }
+}
+
+export const postAnswers = (answers) => {
+  return (dispatch) => {
+    dispatch(changeLoading(true))
+    axios.post(`${config.apiUrl}api/personality-test/answers`, {
+      answers
+    }, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    .then(res => {
+      // console.log('after submit', res.data)
+      dispatch(changeLoading(false))
+      window.location.assign('/welcome')
     })
     .catch(err => {
       dispatch(changeLoading(false))
