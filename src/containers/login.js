@@ -1,5 +1,6 @@
 import React from 'react'
 import FacebookLogin from 'react-facebook-login'
+import { connect } from 'react-redux'
 
 import { login } from '../actions/user'
 
@@ -52,4 +53,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login
+export default connect()(Login)
