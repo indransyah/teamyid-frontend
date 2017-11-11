@@ -1,5 +1,6 @@
 import * as types from '../types/user'
 import axios from 'axios'
+import config from '../config'
 
 export const setUserData = user => {
   return {
@@ -11,7 +12,7 @@ export const setUserData = user => {
 // Async
 export const login = (facebookToken) => {
   return (dispatch) => {
-    axios.post('http://teamyidstaging.ngedev.com/api/login/facebook', {
+    axios.post(`${config.apiUrl}api/login/facebook`, {
       token: facebookToken
     }, {
       headers: {
