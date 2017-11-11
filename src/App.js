@@ -7,6 +7,7 @@ import logger from 'redux-logger'
 
 // Containers / Components
 import Header from './components/header'
+import Landing from './containers/landing'
 import Login from './containers/login'
 import Group from './containers/group'
 import Search from './containers/search'
@@ -33,7 +34,8 @@ class App extends Component {
         <Router>
           <div>
             <Header/>
-            <Route exact path="/" component={Login}/>
+            <Route exact path="/" component={Landing}/>
+            <Route path="/login" component={Login}/>
             <Route path="/group" component={Group}/>
             <Route path="/search" component={Search}/>
             <Route path="/welcome" component={Welcome}/>
